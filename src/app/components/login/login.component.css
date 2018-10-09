@@ -1,0 +1,62 @@
+
+/* login form style*/
+
+#form{
+    background-color: #fff;
+    margin:20px;
+    margin-left: -10px;
+    padding-bottom: 10px;
+    width: 520px;
+    
+}
+.form-top{
+    background-color:whitesmoke;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+
+}
+
+
+
+/* Style the input container */
+.input-container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* Style the form icons */
+.icon {
+  padding: 10px;
+  background: dodgerblue;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+/* Style the input fields */
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+
+.input-field:focus {
+  border: 2px solid dodgerblue;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: dodgerblue;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}

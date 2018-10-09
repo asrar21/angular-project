@@ -1,0 +1,33 @@
+#background{
+    background-color: #2e2e2e;
+    /* height: 100%;
+    width: 100%; */
+    font-family: 'Roboto', sans-serif;
+}
+#heading{
+    text-align: center;
+    color: #fff;
+    margin-top: 11rem;
+    margin-left: 35px;
+    margin-bottom: 7.5rem;
+    font-size: 40px;
+    font-weight: lighter;
+}
+#patient,#doctor,#analyst{
+    height: 120px;
+    width: 155px;
+    margin:1px;
+    border: solid 3px #888;
+    background-color: #2e2e2e;
+    color: #fff;
+    padding-top: 47px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size:15px;
+    text-shadow:0.04px 0.04px;
+    letter-spacing: 0.5px;
+}
+#patient:hover, #doctor:hover ,#analyst:hover{
+    transition-duration: 200ms;
+    background-color: rgba(255, 255, 255, 0.875);
+}
