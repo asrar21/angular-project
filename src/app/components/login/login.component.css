@@ -1,6 +1,8 @@
 
 /* login form style*/
-
+#form-bg{
+  background-color: #2e2e2e;
+}
 #form{
     background-color: #fff;
     margin:20px;
@@ -26,15 +28,6 @@
   margin-bottom: 15px;
 }
 
-/* Style the form icons */
-.icon {
-  padding: 10px;
-  background: dodgerblue;
-  color: white;
-  min-width: 50px;
-  text-align: center;
-}
-
 /* Style the input fields */
 .input-field {
   width: 100%;
@@ -44,6 +37,7 @@
 
 .input-field:focus {
   border: 2px solid dodgerblue;
+  border-radius: 2px;
 }
 
 /* Set a style for the submit button */
@@ -53,7 +47,6 @@
   padding: 15px 20px;
   border: none;
   cursor: pointer;
-  width: 100%;
   opacity: 0.9;
 }
 

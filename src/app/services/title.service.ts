@@ -5,11 +5,11 @@ import { Injectable }  from '@angular/core';
 export class Title{
     private title = '';
 
-    
     set Title(title){
         this.title = title;
     }
     get Title(){
+
         return this.title;
     }
 }

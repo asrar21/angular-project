@@ -11,10 +11,11 @@ export class DashboardComponent implements OnInit {
   constructor(private title: Title){}
 
   form_title = [" Patient Portal"," Analyst Portal"," Doctor Portal"];
+
   form_flag = false;
 
   onClick(id){
-    this.form_flag= true;
+    this.form_flag = !this.form_flag;
     this.title.Title = this.form_title[id];
   } 
 

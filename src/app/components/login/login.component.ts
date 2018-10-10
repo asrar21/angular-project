@@ -8,9 +8,7 @@ import { Http } from '@angular/http';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  title = '';
   constructor(private name:Title, private http:Http) { 
-    this.title = this.name.Title;
   }
   onSubmit(data:NgForm){
     const { username, password } = data.form.controls;
@@ -23,7 +21,8 @@ export class LoginComponent implements OnInit {
         res => console.log(res)
       );
   }
-
-  ngOnInit() {
+  Title(){
+    return this.name.Title;
   }
+  ngOnInit() { }
 }

@@ -1,0 +1,71 @@
+/* side nav bar */
+#side-nav{
+    background-color: #00001e;
+    height: 100vh;
+}
+/* side nav header  */
+#nav-header{
+    background-color: #00000a;
+    margin: -20px -15px;
+    height: 28%;
+}
+/* nav body */
+.nav-body{
+    margin-top: 30%;
+    margin-left: -15px;
+    margin-right: -15px;
+    font-size: 18px;
+    padding: 10px 40px 10px 40px;
+}
+.nav-body:hover{
+    background-color: #00000a;
+    color: white;
+}
+/* side nav header user icon */
+#user-logo{
+    margin: 20% 1% 1% 25%;
+    font-size: 40px;
+    border: solid #fff 10px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+/* side nav  header titles */
+.nav-title{
+    margin-left: 25%;
+    color: #fff;
+}
+/* top nav bar */
+.navbar{
+    background-color: #000019;
+    border-radius: 0px;
+}
+.dash{
+    width: 30px;
+    border: solid white 1px;
+    border-radius: 5px;
+    margin-bottom: -13px;
+}
+/* for dashes */
+.dashes{
+    margin-top: 15px;
+    margin-left: 10px;
+    width: 32px;
+}
+.nav-cont{
+    float: right;
+    color: #fff;
+    margin-top:-8px;
+}
+.nav-list-item{
+    display: inline;
+    padding: 10px;    
+}
+.nav-list-item:hover, .dashes:hover{
+    transition-duration: 100ms;
+    background-color: #00000a;
+}
+
+/* side bar animation */
+#side-nav:active{
+    display: none;
+}

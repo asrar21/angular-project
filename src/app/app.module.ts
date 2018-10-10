@@ -12,6 +12,7 @@ import { Title } from './services/title.service';
 import { ChartsComponent } from './components/charts/charts.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { PatientComponent } from './components/patient/patient.component';
+import { NavComponent } from './components/general/nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PatientComponent } from './components/patient/patient.component';
     LoginComponent,
     ChartsComponent,
     DashboardComponent,
-    PatientComponent
+    PatientComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
