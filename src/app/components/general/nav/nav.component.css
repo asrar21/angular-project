@@ -1,7 +1,8 @@
 /* side nav bar */
 #side-nav{
-    background-color: #00001e;
+    background-color: #00001ef2;
     height: 100vh;
+    color: #666;
 }
 /* side nav header  */
 #nav-header{
@@ -36,7 +37,7 @@
 }
 /* top nav bar */
 .navbar{
-    background-color: #000019;
+    background-color: #00001ef2;
     border-radius: 0px;
 }
 .dash{
@@ -58,14 +59,16 @@
 }
 .nav-list-item{
     display: inline;
-    padding: 10px;    
+    margin: 10px;    
 }
 .nav-list-item:hover, .dashes:hover{
     transition-duration: 100ms;
     background-color: #00000a;
 }
 
-/* side bar animation */
-#side-nav:active{
-    display: none;
+/*  edit button style */
+#edit-btn:hover{
+    transition-duration: 150ms;
+    color: white;
+    background-color: #00000a
 }

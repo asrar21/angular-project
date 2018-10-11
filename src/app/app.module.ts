@@ -13,6 +13,9 @@ import { ChartsComponent } from './components/charts/charts.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { PatientComponent } from './components/patient/patient.component';
 import { NavComponent } from './components/general/nav/nav.component';
+import { PatientQuestionnaireComponent } from './components/patient-questionnaire/patient-questionnaire.component';
+import { PatientSleepDiaryComponent } from './components/patient-sleep-diary/patient-sleep-diary.component';
+import { RenderPage } from './services/renderPage';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,9 @@ import { NavComponent } from './components/general/nav/nav.component';
     ChartsComponent,
     DashboardComponent,
     PatientComponent,
-    NavComponent
+    NavComponent,
+    PatientQuestionnaireComponent,
+    PatientSleepDiaryComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +41,8 @@ import { NavComponent } from './components/general/nav/nav.component';
     ])
   ],
   providers: [
-    Title
+    Title,
+    RenderPage
   ],
   bootstrap: [AppComponent]
 })

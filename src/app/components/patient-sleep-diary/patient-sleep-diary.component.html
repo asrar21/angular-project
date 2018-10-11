@@ -1,0 +1,118 @@
+<div class="col-md-10" id="patient-sleep-diary">
+  <div class="panel panel-info">
+    <div class="panel-heading">
+      SLEEP DIARY
+    </div>
+
+    <div class="panel-body">
+      <div class="col-lg-12">
+        <table class="col-lg-12">
+          <tbody>
+            <tr>
+              <th> Questions</th>
+              <th> Options </th>
+            </tr>
+            <tr>
+              <td>Select Night </td>
+              <td><select name="ctl00$ContentPlaceHolder1$night" id="ContentPlaceHolder1_night" class="form-control form-group"
+                  required="required">
+                  <option value="1">1</option>
+                  <option value="2">2 </option>
+                  <option value="3">3</option>
+
+                </select></td>
+            </tr>
+            <tr>
+              <td>Date study started: </td>
+              <td><input name="ctl00$ContentPlaceHolder1$datestart" type="date" id="ContentPlaceHolder1_datestart"
+                  required="required" class="form-control"></td>
+            </tr>
+            <tr>
+              <td>Did you take a prescription medication to help you fall or stay asleep?</td>
+              <td>
+                <table id="ContentPlaceHolder1_prescription" class="RadioButtonWidth" cellspacing="2" cellpadding="3">
+                  <tbody>
+                    <tr>
+                      <td><input id="ContentPlaceHolder1_prescription_0" type="radio" name="ctl00$ContentPlaceHolder1$prescription"
+                          value="yes"><label for="ContentPlaceHolder1_prescription_0">Yes</label></td>
+                      <td><input id="ContentPlaceHolder1_prescription_1" type="radio" name="ctl00$ContentPlaceHolder1$prescription"
+                          value="no"><label for="ContentPlaceHolder1_prescription_1">No</label></td>
+                    </tr>
+                  </tbody>
+                </table><span id="ContentPlaceHolder1_ReqiredFieldValidator1" style="color:Red;visibility:hidden;">Mandatory
+                  Field</span>
+              </td>
+            </tr>
+            <tr>
+              <td>How many alcoholic beverages did you consume within 4 hours before bedtime? Beer, glass of wine,
+                mixed
+                drink </td>
+              <td><input name="ctl00$ContentPlaceHolder1$beverages" type="text" id="ContentPlaceHolder1_beverages"
+                  required="required" class="form-control"></td>
+            </tr>
+            <tr>
+              <td>How many caffeinated beverages did you consume within 4 hours before bedtime? Coffee, soda, energy
+                drink </td>
+              <td><input name="ctl00$ContentPlaceHolder1$caffeinated" type="text" id="ContentPlaceHolder1_caffeinated"
+                  required="required" class="form-control"></td>
+            </tr>
+            <tr>
+              <td>What time did you turn the lights off and begin trying to fall asleep? (Hr-Min-AM/PM) </td>
+              <td><input name="ctl00$ContentPlaceHolder1$lights" type="time" id="ContentPlaceHolder1_lights" required="required"
+                  class="form-control"></td>
+            </tr>
+            <tr>
+              <td>How long do you think it took you to fall asleep? DO NOT look at the clock. (Hr-Min) </td>
+              <td>
+                <div class="input-group">
+                  <input name="ctl00$ContentPlaceHolder1$sleephour" type="number" id="ContentPlaceHolder1_sleephour"
+                    class="form-control" required="required" placeholder="Hr">
+                  <span class="input-group-addon">-</span>
+                  <input name="ctl00$ContentPlaceHolder1$sleepmin" type="number" id="ContentPlaceHolder1_sleepmin"
+                    class="form-control" required="required" placeholder="Min">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>How many times do you think you woke up between the time you first fell asleep and your final
+                awakening? </td>
+              <td><input name="ctl00$ContentPlaceHolder1$wokeup" type="number" id="ContentPlaceHolder1_wokeup" required="required"
+                  class="form-control"></td>
+            </tr>
+            <tr>
+              <td>What was the total time you think you were awake after you initially fell asleep until you ended your
+                night of sleep? DO NOT look at the clock </td>
+              <td><input name="ctl00$ContentPlaceHolder1$totaltime" type="number" id="ContentPlaceHolder1_totaltime"
+                  required="required" class="form-control"></td>
+            </tr>
+            <tr>
+              <td>What time did you turn the device off for your final awakening that ended your night of sleep?
+                (Hr-Min-AM/PM) </td>
+              <td><input name="ctl00$ContentPlaceHolder1$turnofftime" type="time" id="ContentPlaceHolder1_turnofftime"
+                  required="required" class="form-control"></td>
+            </tr>
+            <tr>
+              <td>Approximately how long did you sleep last night? (Hr-Min) </td>
+              <td>
+                <div class="input-group">
+                  <input name="ctl00$ContentPlaceHolder1$totalsleephours" type="number" id="ContentPlaceHolder1_totalsleephours"
+                    class="form-control" max="24" placeholder="Hr">
+                  <span class="input-group-addon">-</span>
+                  <input name="ctl00$ContentPlaceHolder1$totalsleepmin" type="number" id="ContentPlaceHolder1_totalsleepmin"
+                    class="form-control" required="required" min="60" placeholder="Min">
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="col-lg-12">
+          <br>
+          <input type="submit" value="Submit" class="btn-success btn-rounded pull-right">
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

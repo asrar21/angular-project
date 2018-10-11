@@ -2,9 +2,21 @@
 <app-nav></app-nav>
 
 <!-- patient page  -->
-<div class="container">
-    <div class="nav-body">Body</div>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-       Molestias sit doloribus et blanditiis a deleniti accusamus totam nam deserunt officia quisquam ducimus ullam minima consequuntur,
-        tenetur soluta est rem repellendus.</p>
+<!--<app-patient-sleep-diary> component only rendered when "sleepDiaryFlag" is set to true -->
+<app-patient-sleep-diary *ngIf="renderPage.sleepDiaryFlag"></app-patient-sleep-diary>
+
+<div class="container" [ngStyle]={display:getDisplay()}>
+    <div class="row">
+        <div class="col-md-3 col-md-push-2 col-xs-3 col-xs-push-2 col-lg-3 col-lg-push-2 col-sm-3 col-sm-push-2">
+            <button class="btn btn-default" id="form-button">Medical History Questionnaire</button>
+        </div>
+        <div class="col-md-3 col-md-push-2 col-xs-3 col-xs-push-2 col-lg-3 col-lg-push-2 col-sm-3 col-sm-push-2">
+            <!-- when user click on this button toggleSleepDiary() called, sets the flag "sleepDiaryFlag" to true on the RenderPage class
+                 -->
+            <button class="btn btn-default" id="form-button" (click)="toggleSleepDiary()">Sleep diary</button>
+        </div>
+    </div>
 </div>
+
+
+

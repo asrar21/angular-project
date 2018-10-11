@@ -1,34 +1,36 @@
-<div>
-
-    <div class="col-md-2 col-sm-2 col-xs-2 col-lg-2" id="side-nav">
-      <div>
-          <div id="nav-header">
-              <div class="icon-bg"><span class="glyphicon glyphicon-user" id="user-logo"></span></div>
-              <h5 class="nav-title">SleepLyfe</h5>
-              <h5 class="nav-title">Patient</h5>
-            </div>
-            <div class="nav-body">
-              <div class="glyphicon glyphicon-home"> Home </div>
-            </div>
-      </div>
+<div class="col-md-2 col-sm-2 col-xs-2 col-lg-2" id="side-nav">
+  <div>
+    <div id="nav-header">
+      <div class="icon-bg"><span class="glyphicon glyphicon-user" id="user-logo"></span></div>
+      <h5 class="nav-title">SleepLyfe</h5>
+      <h5 class="nav-title">Patient</h5>
     </div>
-    <div class="col-md-10 col-sm-10 col-xs-10 col-lg-10">
-      <div class="row">
-        <div class="navbar">
-          <div class="dashes">
-            <div class="dash"></div><br>
-            <div class="dash"></div><br>
-            <div class="dash"></div>
-          </div>
-          <div class="nav-cont">
-            <ul>
-              <li class="nav-list-item"> SleepLyfe</li>
-              <li class="nav-list-item">
-                <div class="glyphicon glyphicon-log-out"></div> Logout
-              </li>
-            </ul>
-          </div>
-        </div>
+    <div class="nav-body">
+      <!-- when user clicks on "home" a function named onClick() called which then calls reset(), which is in the class named
+        "RenderPage" in the services folder, reset() sets all the flags to their initial values  -->
+      <div class="glyphicon glyphicon-home"><span style="cursor: pointer;" (click)="onClick()"> Home</span></div>
+    </div>
+  </div>
+</div>
+<div class="col-md-10 col-sm-10 col-xs-10 col-lg-10">
+  <div class="row">
+    <div class="navbar">
+      <div class="dashes">
+        <div class="dash"></div><br>
+        <div class="dash"></div><br>
+        <div class="dash"></div>
+      </div>
+      <div class="nav-cont">
+        <ul>
+          <li class="nav-list-item"> SleepLyfe</li>
+          <li class="nav-list-item"><span class="btn btn-default" id="edit-btn">Edit profile</span></li>
+          <li class="nav-list-item">
+            <span class="btn btn-default" id="edit-btn">
+              <div class="glyphicon glyphicon-log-out"></div> Logout
+            </span>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
+</div>
