@@ -1,25 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '../../services/title.service';
 import { NgForm } from '@angular/forms';
-import { Http } from '@angular/http';
+import { ApiServices } from '../../services/apiServer';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  constructor(private name:Title, private http:Http) { 
+  constructor(private name:Title, private apiServices:ApiServices) { 
   }
   onSubmit(data:NgForm){
     const { username, password } = data.form.controls;
-    const user = {
-      name: username.value,
+    const user = { // user maybe patient, analyst, doctor
+      username: username.value,
       password: password.value
     }
-    this.http.post('http://localhost:5000/api/login', user)
-      .subscribe( 
-        res => console.log(res)
-      );
+    // console.log(user);
+    this.apiServices.patientLogin(user);
   }
   Title(){
     return this.name.Title;
