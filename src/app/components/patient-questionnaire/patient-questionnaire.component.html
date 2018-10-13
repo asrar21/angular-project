@@ -1,3 +1,739 @@
-<p>
-  patient-questionnaire works!
-</p>
+<div class="col-md-10" id="questionnaire-form">
+
+  <div class="panel panel-info">
+
+    <div class="panel-heading">
+      Health Questionnaire
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+
+          <li class="nav-item">
+            <a class="nav-link" (click)="onClick(0)"> Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="onClick(1)"> Medical History </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="onClick(2)"> EDS-Screen </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="onClick(3)"> Current Sleep Problem </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="onClick(4)"> Medication </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="onClick(5)"> Generalized Anxiety </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+
+      <div class="container">
+        <div class="home-form" [ngStyle]={display:getDisplay(0)}>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="first name">First name</label>
+                <div class="input-container">
+                  <input type="text" class="input-filed" ngModel name="firstName">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="Middle initials">Middle initials</label>
+                <div class="input-container">
+                  <input type="text" class="input-filed" ngModel name="MiddleInitials">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="Last name">Last name</label>
+                <div class="input-container">
+                  <input type="text" class="input-filed" ngModel name="LastName">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="Date of Birth">Date of Birth</label>
+            <div class="input-container">
+              <input type="text" class="input-filed" ngModel name="Date of Birth">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="Age">Age</label>
+            <div class="input-container">
+              <input type="text" class="input-filed" ngModel name="Age">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="Weigth">Weigth</label>
+            <div class="input-container">
+              <input type="text" class="input-filed" ngModel name="Weigth">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="Height">Heigth</label>
+            <div class="input-container">
+              <input type="text" class="input-filed" ngModel name="Heigth">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="Gender">Gender</label>
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="male" ngModel name="Male"> Male
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="female" ngModel name="Female"> Female
+            <br>
+
+          </div>
+          <div>
+            <div class="panel-body">
+              <button class="btn btn-primary" (click)="onClick(1)">Next</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="medical-history-form" [ngStyle]={display:getDisplay(1)}>
+          Have you been diagnosed or treated for any of the following conditions or have the following symptoms?
+          <div class="form-group">
+            <label for="*High Blood Pressure">*High Blood Pressure</label>
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="Yes" ngModel name="Yes"> Yes
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="No" ngModel name="NO">NO
+            <br>
+
+          </div>
+          <div class="form-group">
+            <label for="Heart Diseases">Heart Diseases</label>
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="Yes" ngModel name="Yes"> Yes
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="No" ngModel name="NO">NO
+            <br>
+
+          </div>
+          <div class="form-group">
+            <label for="Diabetes">Diabetes</label>
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="Yes" ngModel name="Yes"> Yes
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="No" ngModel name="NO">NO
+            <br>
+
+          </div>
+          <div class="form-group">
+            <label for="Restless Leg Syndrome">Restless Leg Syndrome</label>
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="Yes" ngModel name="Yes"> Yes
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="No" ngModel name="NO">NO
+            <br>
+
+          </div>
+          <div class="form-group">
+            <label for="Sleep Apnea">Sleep Apnea</label>
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="Yes" ngModel name="Yes"> Yes
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="No" ngModel name="NO">NO
+            <br>
+
+          </div>
+          <div class="form-group">
+            <label for="Insomnia">Insomnia</label>
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="Yes" ngModel name="Yes"> Yes
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="No" ngModel name="NO">NO
+            <br>
+
+          </div>
+          <div class="form-group">
+            <label for="Narcolepsy">Narcolepsy</label>
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="Yes" ngModel name="Yes"> Yes
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="No" ngModel name="NO">NO
+            <br>
+
+          </div>
+          <div class="form-group">
+            <label for="Depression">Depression</label>
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="Yes" ngModel name="Yes"> Yes
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="No" ngModel name="NO">NO
+            <br>
+
+          </div>
+          <div class="form-group">
+            <label for="Stroke">Stroke</label>
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="Yes" ngModel name="Yes"> Yes
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="No" ngModel name="NO">NO
+            <br>
+
+          </div>
+          <div class="form-group">
+            <label for="A.M. Headaches">A.M. Headaches</label>
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="Yes" ngModel name="Yes"> Yes
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="No" ngModel name="NO">NO
+            <br>
+
+          </div>
+          <div class="panel-body">
+            <button class="btn btn-primary" type="input" (click)="onClick(2)">Next</button>
+          </div>
+        </div>
+
+        <div class="eds-screen" [ngStyle]={display:getDisplay(2)}>
+          <p>
+            Epworth Sleepiness Scale: How likely are you to doze off or fall asleep in the following situations, in
+            contrast
+            to just
+            feeling tired? This refers to your usual way of life in recent times. Even if you have not done some of
+            these
+            things
+            recently, try to work out how they would have affected you. Use the following scale to mark the most
+            appropriate
+            box
+            for each situation. (M.W. Johns, Sleep 1991)
+          </p>
+          <div class="form-group">
+            <label for="0 = would never doze    1 = slight chance of dozing    2 = moderate chance of dozing    3 = high chance of dozing">0
+              = would never doze 1 = slight chance of dozing 2 = moderate chance of dozing 3 = high chance of dozing</label>
+            <br>
+            <label for="Sitting and reading">Sitting and reading</label>
+            <br>
+
+            <input type="radio" name="0" class="input-filed" value="0" ngModel name="0"> 0
+
+            <input type="radio" name="1" class="input-filed" value="1" ngModel name="1">1
+            <input type="radio" name="2" class="input-filed" value="2" ngModel name="2"> 2
+
+            <input type="radio" name="3" class="input-filed" value="3" ngModel name="3">3
+
+
+          </div>
+          <div class="form-group">
+            <label for="Watching TV">Watching TV</label>
+            <br>
+            <input type="radio" name="0" class="input-filed" value="0" ngModel name="0"> 0
+
+            <input type="radio" name="1" class="input-filed" value="1" ngModel name="1">1
+            <input type="radio" name="2" class="input-filed" value="2" ngModel name="2"> 2
+
+            <input type="radio" name="3" class="input-filed" value="3" ngModel name="3">3
+
+
+          </div>
+          <div class="form-group">
+            <label for="As a passenger in a car for an hour without a break">As a passenger in a car for an hour
+              without
+              a
+              break</label>
+            <br>
+            <input type="radio" name="0" class="input-filed" value="0" ngModel name="0"> 0
+
+            <input type="radio" name="1" class="input-filed" value="1" ngModel name="1">1
+            <input type="radio" name="2" class="input-filed" value="2" ngModel name="2"> 2
+
+            <input type="radio" name="3" class="input-filed" value="3" ngModel name="3">3
+
+          </div>
+          <div class="form-group">
+            <label for="Sitting inactive in a public place (Theater, Meeting, Etc.)">Sitting inactive in a public place
+              (Theater, Meeting, Etc.)</label>
+            <br>
+            <input type="radio" name="0" class="input-filed" value="0" ngModel name="0"> 0
+
+            <input type="radio" name="1" class="input-filed" value="1" ngModel name="1">1
+            <input type="radio" name="2" class="input-filed" value="2" ngModel name="2"> 2
+
+            <input type="radio" name="3" class="input-filed" value="3" ngModel name="3">3
+
+
+          </div>
+          <div class="form-group">
+            <label for="Sitting and talking to someone">Sitting and talking to someone</label>
+            <br>
+            <input type="radio" name="0" class="input-filed" value="0" ngModel name="0"> 0
+
+            <input type="radio" name="1" class="input-filed" value="1" ngModel name="1">1
+            <input type="radio" name="2" class="input-filed" value="2" ngModel name="2"> 2
+
+            <input type="radio" name="3" class="input-filed" value="3" ngModel name="3">3
+
+
+          </div>
+          <div class="form-group">
+            <label for="Lying down to rest in the afternoon when circumstances permit">Lying down to rest in the
+              afternoon
+              when circumstances permit</label>
+            <br>
+            <input type="radio" name="0" class="input-filed" value="0" ngModel name="0"> 0
+
+            <input type="radio" name="1" class="input-filed" value="1" ngModel name="1">1
+            <input type="radio" name="2" class="input-filed" value="2" ngModel name="2"> 2
+
+            <input type="radio" name="3" class="input-filed" value="3" ngModel name="3">3
+
+
+          </div>
+          <div class="form-group">
+            <label for="Sitting quietly after lunch without alcoho">Sitting quietly after lunch without alcoho</label>
+            <br>
+            <input type="radio" name="0" class="input-filed" value="0" ngModel name="0"> 0
+
+            <input type="radio" name="1" class="input-filed" value="1" ngModel name="1">1
+            <input type="radio" name="2" class="input-filed" value="2" ngModel name="2"> 2
+
+            <input type="radio" name="3" class="input-filed" value="3" ngModel name="3">3
+
+
+          </div>
+          <div class="form-group">
+            <label for="In a car, while stopped for a few minutes in traffic">In a car, while stopped for a few minutes
+              in
+              traffic</label>
+            <br>
+            <input type="radio" name="0" class="input-filed" value="0" ngModel name="0"> 0
+
+            <input type="radio" name="1" class="input-filed" value="1" ngModel name="1">1
+            <input type="radio" name="2" class="input-filed" value="2" ngModel name="2"> 2
+
+            <input type="radio" name="3" class="input-filed" value="3" ngModel name="3">3
+
+
+          </div>
+          <div class="panel-body">
+            <button class="btn btn-primary" (click)="onClick(3)">Next</button>
+          </div>
+        </div>
+
+        <div class="current-sleep-problem" [ngStyle]={display:getDisplay(3)}>
+          Please rate the CURRENT (i.e., LAST TWO WEEKS) SEVERITY of your insomnia problem(s
+          <div class="form-group">
+            <label for="Difficulty falling asleep">Difficulty falling asleep</label>
+            <br>
+
+            <input type="radio" name="0" class="input-filed" value="None" ngModel name="None"> None
+
+            <input type="radio" name="1" class="input-filed" value="Mild" ngModel name="Mild">Mild
+            <input type="radio" name="2" class="input-filed" value="Moderate" ngModel name="Moderate"> Moderate
+
+            <input type="radio" name="3" class="input-filed" value="Server" ngModel name="Server">Server
+            <input type="radio" name="3" class="input-filed" value="Very Server" ngModel name="Very Server">Very Server
+
+          </div>
+
+          <div class="form-group">
+            <br>
+            <label for="Difficulty staying asleep">Difficulty staying asleep</label>
+            <br>
+
+            <input type="radio" name="0" class="input-filed" value="None" ngModel name="None"> None
+
+            <input type="radio" name="1" class="input-filed" value="Mild" ngModel name="Mild">Mild
+            <input type="radio" name="2" class="input-filed" value="Moderate" ngModel name="Moderate"> Moderate
+
+            <input type="radio" name="3" class="input-filed" value="Server" ngModel name="Server">Server
+            <input type="radio" name="3" class="input-filed" value="Very Server" ngModel name="Very Server">Very Server
+
+          </div>
+          <div class="form-group">
+            <br>
+            <label for="Problem waking up too early">Problem waking up too early</label>
+            <br>
+
+            <input type="radio" name="0" class="input-filed" value="None" ngModel name="None"> None
+
+            <input type="radio" name="1" class="input-filed" value="Mild" ngModel name="Mild">Mild
+            <input type="radio" name="2" class="input-filed" value="Moderate" ngModel name="Moderate"> Moderate
+
+            <input type="radio" name="3" class="input-filed" value="Server" ngModel name="Server">Server
+            <input type="radio" name="3" class="input-filed" value="Very Server" ngModel name="Very Server">Very Server
+
+          </div>
+          <div class="Current Sleep Problem">
+            To what extent do you consider your sleep problem to INTERFERE with your CURRENT functioning (e.g. daytime
+            fatigue, ability
+            to function at work / daily chores, concentration, memory, mood, etc.)?
+            <div class="form-group">
+
+
+              <input type="radio" name="0" class="input-filed" value="Not at all Interfering" ngModel name="Not at all Interfering">
+              Not at all Interfering
+
+              <input type="radio" name="1" class="input-filed" value="A Little" ngModel name="A Little">A Little
+              <input type="radio" name="2" class="input-filed" value="Much" ngModel name="Much"> Much
+
+              <input type="radio" name="3" class="input-filed" value="Very Much Interfering" ngModel name="Very Much Interfering">Very
+              Much Interfering
+
+            </div>
+
+
+
+          </div>
+          <div class="Current Sleep Problem">
+            To what extent do you consider your sleep problem to INTERFERE with your CURRENT functioning (e.g. daytime
+            fatigue, ability
+            to function at work / daily chores, concentration, memory, mood, etc.)?
+            <div class="form-group">
+
+
+              <input type="radio" name="0" class="input-filed" value="Not at all Interfering" ngModel name="Not at all Interfering">
+              Not at all Interfering
+
+              <input type="radio" name="1" class="input-filed" value="A Little" ngModel name="A Little">A Little
+              <input type="radio" name="2" class="input-filed" value="Much" ngModel name="Much"> Much
+
+              <input type="radio" name="3" class="input-filed" value="Very Much Interfering" ngModel name="Very Much Interfering">Very
+              Much Interfering
+
+            </div>
+
+
+
+          </div>
+          <div class="Current Sleep Problem">
+            How often during the week do you drink alcoholic beverages in the evening before falling asleep?
+            <div class="form-group">
+
+
+              <input type="radio" name="0" class="input-filed" value="Never" ngModel name="Never"> Never
+
+              <input type="radio" name="1" class="input-filed" value="1-2 Times" ngModel name="1-2 Timese">1-2 Times
+              <input type="radio" name="2" class="input-filed" value="2-3 Times" ngModel name="2-3 Times"> 2-3 Times
+
+              <input type="radio" name="3" class="input-filed" value="4–5 Times" ngModel name="4–5 Times">4–5 Times
+              <input type="radio" name="3" class="input-filed" value="Always 6-7 Times" ngModel name="Always 6-7 Times">Always
+              6-7 Times
+
+            </div>
+
+
+
+          </div>
+          <div class="Current Sleep Problem">
+            Do you drink more than one beverage with caffeine in the afternoon or evening (i.e., coffee, tea, energy or
+            soft drinks)?
+
+            <div class="form-group">
+
+
+              <input type="radio" name="0" class="input-filed" value="Never" ngModel name="Never"> Never
+
+              <input type="radio" name="1" class="input-filed" value="Rarely" ngModel name="Rarely">Rarely
+              <input type="radio" name="2" class="input-filed" value="SomeTimes" ngModel name="Sometimes"> Sometimes
+
+              <input type="radio" name="3" class="input-filed" value="4–5 Times" ngModel name="Freuqentel">Frequently
+              <input type="radio" name="3" class="input-filed" value="Always " ngModel name="Always ">Almost Always
+
+
+            </div>
+
+
+
+          </div>
+          <div class="panel-body">
+            <button class="btn btn-primary" (click)="onClick(4)">Next</button>
+          </div>
+        </div>
+
+        <div class="medication" [ngStyle]={display:getDisplay(4)}>
+          <div class="form-group">
+            <label> Do you have problems keeping your legs still at night or need to move them to feel comfortable?</label>
+            <br>
+
+
+            <input type="radio" name="0" class="input-filed" value="Never" ngModel name="Never"> Never
+
+            <input type="radio" name="1" class="input-filed" value="Rarely" ngModel name="Rarely">Rarely
+            <input type="radio" name="2" class="input-filed" value="SomeTimes" ngModel name="Sometimes"> Sometimes
+
+            <input type="radio" name="3" class="input-filed" value="4–5 Times" ngModel name="Freuqentel">Frequently
+            <input type="radio" name="3" class="input-filed" value="Always " ngModel name="Always ">Almost Always
+
+
+          </div>
+          <div class="form-group">
+            <label>Do you have vivid or troubling nightmares?</label>
+            <br>
+
+
+            <input type="radio" name="0" class="input-filed" value="Never" ngModel name="Never"> Never
+
+            <input type="radio" name="1" class="input-filed" value="Rarely" ngModel name="Rarely">Rarely
+            <input type="radio" name="2" class="input-filed" value="SomeTimes" ngModel name="Sometimes"> Sometimes
+
+            <input type="radio" name="3" class="input-filed" value="4–5 Times" ngModel name="Freuqentel">Frequently
+            <input type="radio" name="3" class="input-filed" value="Always " ngModel name="Always ">Almost Always
+
+
+          </div>
+          <div class="form-group">
+            <label>On average, in the past month, how often have you snored or been told that you snored?</label>
+            <br>
+
+
+            <input type="radio" name="0" class="input-filed" value="Never" ngModel name="Never"> Never
+
+            <input type="radio" name="1" class="input-filed" value="Rarely" ngModel name="Rarely">Rarely
+            <input type="radio" name="2" class="input-filed" value="SomeTimes" ngModel name="Sometimes"> Sometimes
+
+            <input type="radio" name="3" class="input-filed" value="4–5 Times" ngModel name="Freuqentel">Frequently
+            <input type="radio" name="3" class="input-filed" value="Always " ngModel name="Always ">Almost Always
+
+
+          </div>
+          <div class="form-group">
+            <label>Do you wake up choking or gasping?</label>
+            <br>
+
+
+            <input type="radio" name="0" class="input-filed" value="Never" ngModel name="Never"> Never
+
+            <input type="radio" name="1" class="input-filed" value="Rarely" ngModel name="Rarely">Rarely
+            <input type="radio" name="2" class="input-filed" value="SomeTimes" ngModel name="Sometimes"> Sometimes
+
+            <input type="radio" name="3" class="input-filed" value="4–5 Times" ngModel name="Freuqentel">Frequently
+            <input type="radio" name="3" class="input-filed" value="Always " ngModel name="Always ">Almost Always
+
+
+          </div>
+          <div class="form-group">
+            <label> Have you been told that you stop breathing in your sleep or wake up choking or gasping?</label>
+            <br>
+
+
+            <input type="radio" name="0" class="input-filed" value="Never" ngModel name="Never"> Never
+
+            <input type="radio" name="1" class="input-filed" value="Rarely" ngModel name="Rarely">Rarely
+            <input type="radio" name="2" class="input-filed" value="SomeTimes" ngModel name="Sometimes"> Sometimes
+
+            <input type="radio" name="3" class="input-filed" value="4–5 Times" ngModel name="Freuqentel">Frequently
+            <input type="radio" name="3" class="input-filed" value="Always " ngModel name="Always ">Almost Always
+
+
+          </div>
+          <div class="form-group">
+            <label> How often do you take an ‘Over the Counter’ medication to help you fall asleep or stay asleep?</label>
+            <br>
+
+
+            <input type="radio" name="0" class="input-filed" value="Never" ngModel name="Never"> Never
+
+            <input type="radio" name="1" class="input-filed" value="Rarely" ngModel name="Rarely">Rarely
+            <input type="radio" name="2" class="input-filed" value="SomeTimes" ngModel name="Sometimes"> Sometimes
+
+            <input type="radio" name="3" class="input-filed" value="4–5 Times" ngModel name="Freuqentel">Frequently
+            <input type="radio" name="3" class="input-filed" value="Always " ngModel name="Always ">Almost Always
+
+
+          </div>
+          <div class="form-group">
+            <label> Do you have problems keeping your legs still at night or need to move them to feel comfortable?</label>
+            <br>
+
+
+            <input type="radio" name="0" class="input-filed" value="Never" ngModel name="Never"> Never
+
+            <input type="radio" name="1" class="input-filed" value="Rarely" ngModel name="Rarely">Rarely
+            <input type="radio" name="2" class="input-filed" value="SomeTimes" ngModel name="Sometimes"> Sometimes
+
+            <input type="radio" name="3" class="input-filed" value="4–5 Times" ngModel name="Freuqentel">Frequently
+            <input type="radio" name="3" class="input-filed" value="Always " ngModel name="Always ">Almost Always
+
+
+          </div>
+          <div class="panel-body">
+            <button class="btn btn-primary" (click)="onClick(5)">Next</button>
+          </div>
+
+        </div>
+
+        <div class="generalized-anxiety" [ngStyle]={display:getDisplay(5)}>
+          Do you routinely take any of the following medications?
+          <div class="form-group">
+            <label for="*High Blood Pressure">Ambien (Zolpidem)</label>
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="Yes" ngModel name="Yes"> Yes
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="No" ngModel name="NO">NO
+            <br>
+
+          </div>
+          <div class="form-group">
+            <label for="Heart Diseases">Lunesta (Eszopiclone)</label>
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="Yes" ngModel name="Yes"> Yes
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="No" ngModel name="NO">NO
+            <br>
+
+          </div>
+          <div class="form-group">
+            <label for="Diabetes">Halcion</label>
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="Yes" ngModel name="Yes"> Yes
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="No" ngModel name="NO">NO
+            <br>
+
+          </div>
+          <div class="form-group">
+            <label for="Restless Leg Syndrome">Rozerem</label>
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="Yes" ngModel name="Yes"> Yes
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="No" ngModel name="NO">NO
+            <br>
+
+          </div>
+          <div class="form-group">
+            <label for="Sleep Apnea">Sonata (Zaleplon)</label>
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="Yes" ngModel name="Yes"> Yes
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="No" ngModel name="NO">NO
+            <br>
+
+          </div>
+          <div class="form-group">
+            <label for="Insomnia">Restoril</label>
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="Yes" ngModel name="Yes"> Yes
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="No" ngModel name="NO">NO
+            <br>
+
+          </div>
+          <div class="form-group">
+            <label for="Narcolepsy">Intermezzo</label>
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="Yes" ngModel name="Yes"> Yes
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="No" ngModel name="NO">NO
+            <br>
+
+          </div>
+          <div class="form-group">
+            <label for="Depression">Silenor (Doxepin)</label>
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="Yes" ngModel name="Yes"> Yes
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="No" ngModel name="NO">NO
+            <br>
+
+          </div>
+          <div class="form-group">
+            <label for="Stroke">Xanax</label>
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="Yes" ngModel name="Yes"> Yes
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="No" ngModel name="NO">NO
+            <br>
+
+          </div>
+          <div class="form-group">
+            <label for="A.M. Headaches">Narcotic for Pain</label>
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="Yes" ngModel name="Yes"> Yes
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="No" ngModel name="NO">NO
+            <br>
+
+          </div>
+          <div class="form-group">
+            <label for="A.M. Headaches">High Blood Pressure</label>
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="Yes" ngModel name="Yes"> Yes
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="No" ngModel name="NO">NO
+            <br>
+
+          </div>
+          <div class="form-group">
+            <label for="A.M. Headaches">Steroid</label>
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="Yes" ngModel name="Yes"> Yes
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="No" ngModel name="NO">NO
+            <br>
+
+          </div>
+          <div class="form-group">
+            <label for="A.M. Headaches">Heart Disease</label>
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="Yes" ngModel name="Yes"> Yes
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="No" ngModel name="NO">NO
+            <br>
+
+          </div>
+
+          <div class="form-group">
+            <label for="A.M. Headaches">Antidepressant</label>
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="Yes" ngModel name="Yes"> Yes
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="No" ngModel name="NO">NO
+            <br>
+
+          </div>
+
+          <div class="form-group">
+            <label for="A.M. Headaches">Antihistamines</label>
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="Yes" ngModel name="Yes"> Yes
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="No" ngModel name="NO">NO
+            <br>
+
+          </div>
+          <div class="form-group">
+            <label for="A.M. Headaches">Anti-anxiety/tranquilizer</label>
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="Yes" ngModel name="Yes"> Yes
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="No" ngModel name="NO">NO
+            <br>
+
+          </div>
+          <div class="form-group">
+            <label for="A.M. Headaches">Stimulant/ADHD</label>
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="Yes" ngModel name="Yes"> Yes
+            <br>
+            <input type="radio" name="gender" class="input-filed" value="No" ngModel name="NO">NO
+            <br>
+
+          </div>
+          <div class="panel-body">
+            <input type="submit" value="Submit" class="btn btn-primary">
+          </div>
+
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+#questionnaire-form{
+    margin-top:5px;
+}
+
+li {
+    display: inline;
+}
+
+li a{
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #d3d3d3;
+    color: black;
+    cursor: pointer;
+}

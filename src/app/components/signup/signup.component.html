@@ -1,0 +1,61 @@
+<div class="form">
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <h1> SignUp Form For Patient</h1>
+    <label for="*First Name">*First Name</label>
+
+    <input type="text" class="input-filed" value="" ngModel name="firstName">
+    <br>
+    <label for="*Last Name">*Last Name</label>
+
+    <input type="text" class="input-filed"  value="" ngmodel name="lastName">
+    <br>
+    <label for="* Password">* Password</label>
+
+    <input type="password" class="input-filed"  value="" ngmodel name="password">
+    <br>
+    <label for="*Confirm Password">*Confirm Password</label>
+
+    <input type="password" class="input-filed"  value="" ngmodel name="cpassword">
+    <br>
+    <label for="*UserEmail">*UserEmail</label>
+
+    <input type="text" class="input-filed"  value="" ngmodel name="email">
+    <br>
+    <label for="*Date Of Birth">*Date Of Birth</label>
+
+    <input type="text" class="input-filed" value="" ngmodel name="dob">
+    <br>
+    <label for="Phone No">Phone No</label>
+
+    <input type="text" class="input-filed" value="" ngmodel name="phoneNo">
+    <br>
+    <label for="*BMI">*BMI</label>
+
+    <input type="text" class="input-filed" value="" ngmodel name="bmi">
+    <br>
+    <label for="*Neck Size">*Neck Size</label>
+
+    <input type="text" class="input-filed"  value="" ngmodel name="neckSize">
+    <br>
+    <br>
+    <label for="Select your Doctor">Select Your doctor</label>
+
+    <select>
+      <optgroup label="Doctor">
+        <option value="sumair">suamir</option>
+        <option value="saad">Saad</option>
+      </optgroup>
+      <optgroup label="Doctor">
+        <option value="faraz">faraz</option>
+        <option value="taimor">taimor</option>
+      </optgroup>
+    </select>
+    <br>
+    <br>
+    <input type="submit" class="btn btn-primary mb-2" value="Signup">
+
+
+    <button  class="btn btn-primary mb-2" style="float:right;">Back</button>
+
+  </form>
+</div>

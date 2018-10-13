@@ -1,0 +1,23 @@
+.form{
+    
+    margin: 0 auto;
+    /*background-image: url('../../images/signUp.jpg') !important;*/
+    background:lightgray;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    border: 1px solid rgb(147,206,222);
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px -4px #24303C;
+}
+.center{
+    text-align: center;
+}
+.input{
+    border-radius: 10%;
+}
+.right{
+    float: right;
+    background-color: rgb(49, 116, 170)
+}

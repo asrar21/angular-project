@@ -21,6 +21,7 @@ import { PatientSleepDiaryComponent } from './components/patient-sleep-diary/pat
 import { Title } from './services/title.service';
 import { RenderPage } from './services/renderPage';
 import { ApiServices } from './services/apiServer';
+import { SignupComponent } from './components/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ApiServices } from './services/apiServer';
     PatientComponent,
     NavComponent,
     PatientQuestionnaireComponent,
-    PatientSleepDiaryComponent
+    PatientSleepDiaryComponent,
+    SignupComponent
   ],
   imports: [
   BrowserModule,
@@ -41,7 +43,8 @@ import { ApiServices } from './services/apiServer';
     ChartsModule,
     RouterModule.forRoot([
       { path:'dashboard', component: DashboardComponent },
-      { path:'patient', component: PatientComponent }
+      { path:'patient', component: PatientComponent },
+      { path:'signup', component: SignupComponent}
       
     ])
   ],

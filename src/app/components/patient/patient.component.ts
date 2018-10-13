@@ -15,6 +15,10 @@ export class PatientComponent implements OnInit {
     this.renderPage.sleepDiaryFlag = true;
     this.renderPage.patientLanding = false;
   }
+  togglePatientQuestionnare(){
+    this.renderPage.patientQuestionnare = true;
+    this.renderPage.patientLanding = false;
+  }
   getDisplay(){
     return (this.renderPage.patientLanding===true)? 'block' : 'none';
   }
